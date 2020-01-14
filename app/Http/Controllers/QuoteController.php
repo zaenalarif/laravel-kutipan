@@ -79,8 +79,8 @@ class QuoteController extends Controller
         
         $quote->tags()->attach($request->tags);
         
-        event(new ForumCreated($quote));
-        ForumCreated::dispatch($quote);
+        // event(new ForumCreated($quote));
+        // ForumCreated::dispatch($quote);
         
         return redirect('/quotes')->with('msg', 'kutipan berhasil ditambahkan');
     }
